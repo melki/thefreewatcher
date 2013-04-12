@@ -1,0 +1,20 @@
+{ "manifest_version": 2,
+  "name": "the free-watcher",
+  "description": "This extension allow to see youtube's videos without any problems.",
+  "version": "1.0.1.1",
+  "options_page":"options.html",
+  "permissions": ["storage"],
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "content_scripts": [ {
+		"js": [ "script.js" ],
+		"matches": [ "http://*/*","https://*/*" ],
+		"run_at": "document_end"
+	} ],
+ "browser_action": {
+    "default_icon": "icon128T.png"
+   
+  }
+ 
+}
